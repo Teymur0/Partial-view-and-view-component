@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    HomeViewModel model = Model;
+    var products = model.Products;
+
+}
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5" id="productRow">
+        <partial name="_ProductsPartial" model="@products"></partial>
+    </div>
+    <div class="row justify-content-center" style="width:100%;height:80px">
+        <button id="loadMore" class="btn btn-success">Load More...</button>
+    </div>
+</section>
